@@ -16,9 +16,34 @@ body {
 
 /* Panel izquierdo */
 .left {
-    flex: 1;
-    background-color: #eaeaea;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    background: url("./imgs/fondo10.jpg") no-repeat center center;
+    background-size: cover;
+    background-position: center;
 }
+.img-logo{
+    border-radius: 112px;
+}
+
+.container-text, li{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size:17px ;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    gap:20px ;
+}
+
+
 
 /* Panel derecho */
 .right {
@@ -27,6 +52,13 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #e6f0ff;
+}
+.left::before {
+    content: "";
+    position: absolute;
+    inset: 6;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1; /* capa del overlay */
 }
 
 .login-card {
